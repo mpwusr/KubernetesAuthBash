@@ -3,10 +3,10 @@
 # Make it executable:
 
 ```
-chmod +x get-sa-token.sh
+chmod +x getkubetoken.sh
 ```
 # Then run:
 
 ```
-./get-sa-token.sh my-namespace my-sa https://api.openshift.example.com:6443 $(oc whoami -t) /path/to/ca.crt
+./getkubetoken.sh my-namespace my-sa https://api.openshift.example.com:6443 $(oc whoami -t) /path/to/ca.crt
 ```
