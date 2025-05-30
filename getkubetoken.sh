@@ -11,7 +11,7 @@ API_SERVER="$3"
 USER_TOKEN="$4"
 CA_CERT="$5"
 
-echo "🔍 Getting token secret for service account: $SERVICE_ACCOUNT in namespace: $NAMESPACE"
+echo "Getting token secret for service account: $SERVICE_ACCOUNT in namespace: $NAMESPACE"
 
 # Get the token secret name
 SECRET_NAME=$(curl -s \
@@ -26,7 +26,7 @@ if [ -z "$SECRET_NAME" ]; then
   exit 1
 fi
 
-echo "✅ Found secret: $SECRET_NAME"
+echo "Found secret: $SECRET_NAME"
 
 # Get the token value from the secret
 TOKEN=$(curl -s \
@@ -41,5 +41,5 @@ if [ -z "$TOKEN" ]; then
   exit 1
 fi
 
-echo "🎟  Retrieved Token:"
+echo "Retrieved Token:"
 echo "$TOKEN"
